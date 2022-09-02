@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title> Comment box </title>
+      <link rel="stylesheet" href="./style.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+   <body>
+      <form id="myForm">
+         <div>
+            <h2>FAC Comment box Project</h2>
+            <h4>Full name:</h4> 
+            <input id="userName" type="text" name="fname">
+            
+            <h4>Email:</h4> 
+            <input id="userEmail" type="email" name="email">
+            
+            <h4>Comment:</h4> 
+
+            <textarea id="userComment" maxlength="150" rows="5" cols="50" wrap="hard" name="comment">Leave a comment here :)</textarea>
+            <p id="warningBox"></p> 
+
+            <p>Remaining <span id="info"></span> /140</p>
+            
+            <input type="button" onclick="commentBox()" value="Submit">
+         </div>
+      </form>
+
+      <h5>After submission, data will appear below:</h5>
+      <p id="data"></p>
+   </body>
+   
+   <script src="commentBox.js"></script>
+  
+</html>
