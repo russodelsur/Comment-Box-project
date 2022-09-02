@@ -1,26 +1,73 @@
 * {
-    font-family: Courier New;
+    font-family: Helvetica;
     box-sizing: border-box;
     }
 
 body {
     margin: 1rem;
-    background-color: aliceblue;
+    background-color: #e9e5dd;
+}
+
+form {
+    width: 100%;
 }
 
 div {
     display: flex;
     flex-direction: column;
     max-width: 500px;
+    margin: auto;
 }
-h1 {
 
+p#data {
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 700;
 }
 
 h2 {
     text-align: center;
 }
 
+h4 {
+  margin-bottom: .5rem;
+}
+
+h5{
+    color: #555555;
+    font-weight: 100;
+    font-size: .8rem;
+    text-align: center;
+}
+
+input {
+    border-radius: .5rem;
+    border: 1px solid #555555;
+    padding: .5rem;
+}
+
+input#submit {
+    border: black solid 1px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+input#submit:hover {
+    background-color: #555555;
+    color: white;
+    border: 1px solid #555555;
+}
+
 textarea {
-    border: 1px solid;
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .5rem;
 }

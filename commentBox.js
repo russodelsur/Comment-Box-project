@@ -1,3 +1,5 @@
+// First function to set the data in the form and return the data for display
+
 function commentBox(){
 
     let data = "";  
@@ -6,10 +8,15 @@ function commentBox(){
     let comment = document.getElementById("userComment").value
     let count = textContent = textarea.value.length;
 
-        data = "User name : "+ name +"<br/>User email : "+email+ "<br/>User comment : "+comment + "<br/>" + count
+        data =  "<h5>User name: </h5>"+ name +"<h5>User email: </h5>"+email+ "<h5>Comment: </h5>"+comment + "<h5>Comment characters: </h5>" + count + " characters"
     
         document.getElementById("data").innerHTML = data 
 }
+
+// Now setting variable for the max number of characters, and querySelector to fetch the characters. 
+// Later I used the addEventListener to display the number of characters as they increase.
+// Using JS object Method this to refer to the global object
+// Using the .lenght array method to measure the text character lenght.
 
 const max = 140;
 let textarea = document.querySelector('textarea');
@@ -21,8 +28,11 @@ textarea.addEventListener('input', function() {
 info.textContent = max - this.value.length;
 })
 
-textarea.addEventListener('input',warningBox)
+// New addEventListener to call function warningBox as characters change.
+// Use JS DOM to get characters leght through another method.
+// Using the if and else conditional statements to set the custom styling of the comment box and warning message.
 
+textarea.addEventListener('input',warningBox)
 
 function warningBox(){
 
@@ -30,19 +40,18 @@ function warningBox(){
     let count = document.getElementById('userComment').value.length; 
 
         if (count > max) {
-        warning = "Do not exceed 140 please",
+        warning = "Do not exceed 140 characters please",
         document.getElementById("userComment").style.color = "red";
         document.getElementById("userComment").style.border = "2px solid red";
 
-        console.log('salmon');        
         } else {
             warning = ""
             document.getElementById("userComment").style.color = "black";
-
+            document.getElementById("userComment").style.border = "1px solid black";
         }
+        document.getElementById("warningBox").style.color = "red";
         document.getElementById("warningBox").innerHTML = warning;
 
-        console.log(counter);
         console.log(warning);    
         console.log(count);
         console.log(info);

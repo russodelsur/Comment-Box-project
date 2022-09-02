@@ -12,7 +12,7 @@
          <div>
             <h2>FAC Comment box Project</h2>
             <h4>Full name:</h4> 
-            <input id="userName" type="text" name="fname">
+            <input id="userName" type="text" name="name">
             
             <h4>Email:</h4> 
             <input id="userEmail" type="email" name="email">
@@ -24,14 +24,12 @@
 
             <p>Remaining <span id="info"></span> /140</p>
             
-            <input type="button" onclick="commentBox()" value="Submit">
+            <input id="submit" type="button" onclick="commentBox()" value="Submit">
+
+            <h5>After submission, data will appear below:</h5>
+            <p id="data"></p>
          </div>
       </form>
-
-      <h5>After submission, data will appear below:</h5>
-      <p id="data"></p>
    </body>
-   
    <script src="commentBox.js"></script>
-  
 </html>
